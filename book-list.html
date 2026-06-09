@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background: #fff;
+      font-family: Arial;
+      color: #000;
+    }
+
+    .container {
+      margin-top: 40px;
+    }
+
+    .book-card {
+      border: 1px solid #000;
+      padding: 15px;
+      text-align: center;
+      transition: 0.2s;
+    }
+
+    .book-card:hover {
+      background: #000;
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .rating {
+      font-size: 14px;
+    }
+
+    .btn-buy {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      margin-top: 10px;
+    }
+
+    .btn-buy:hover {
+      opacity: 0.8;
+    }
+
+    .back {
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="books.html" class="back">← Back to Genres</a>
+
+  <h3 id="title">Books</h3>
+
+  <div class="row g-4 mt-3" id="bookContainer"></div>
+
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const genre = params.get("genre");
+
+  const books = {
+    fiction: [
+      {name:"Harry Potter", price:"₹499", rating:"⭐ 4.8"},
+      {name:"The Alchemist", price:"₹299", rating:"⭐ 4.7"},
+      {name:"Game of Thrones", price:"₹599", rating:"⭐ 4.6"}
+    ],
+
+    science: [
+      {name:"Physics Basics", price:"₹399", rating:"⭐ 4.5"},
+      {name:"Chemistry Guide", price:"₹349", rating:"⭐ 4.4"},
+      {name:"Space Science", price:"₹499", rating:"⭐ 4.7"}
+    ],
+
+    education: [
+      {name:"Math Handbook", price:"₹299", rating:"⭐ 4.6"},
+      {name:"English Grammar", price:"₹199", rating:"⭐ 4.5"}
+    ],
+
+    biography: [
+      {name:"Steve Jobs", price:"₹399", rating:"⭐ 4.8"},
+      {name:"Wings of Fire", price:"₹299", rating:"⭐ 4.9"}
+    ],
+
+    technology: [
+      {name:"AI Basics", price:"₹499", rating:"⭐ 4.7"},
+      {name:"Python Guide", price:"₹399", rating:"⭐ 4.6"}
+    ],
+
+    business: [
+      {name:"Rich Dad Poor Dad", price:"₹299", rating:"⭐ 4.8"},
+      {name:"Zero to One", price:"₹399", rating:"⭐ 4.7"}
+    ]
+  };
+
+  const container = document.getElementById("bookContainer");
+
+  document.getElementById("title").innerText =
+    (genre ? genre.toUpperCase() : "BOOKS");
+
+  if (books[genre]) {
+    books[genre].forEach(book => {
+      container.innerHTML += `
+        <div class="col-md-3">
+          <div class="book-card">
+            <h6>${book.name}</h6>
+            <p class="rating">${book.rating}</p>
+            <p class="price">${book.price}</p>
+            <button class="btn-buy">Buy Now</button>
+          </div>
+        </div>
+      `;
+    });
+  } else {
+    container.innerHTML = "<h5>No books found</h5>";
+  }
+</script>
+
+</body>
+</html>

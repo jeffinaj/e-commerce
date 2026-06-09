@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopKart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg px-4">
+  <a class="navbar-brand fw-bold text-white" href="#">ShopKart</a>
+
+  <div class="ms-auto d-flex gap-3">
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Offers</a>
+    <a href="#">Contact</a>
+
+    <a href="#"><i class="bi bi-cart"></i></a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero container">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1>Shopping & Department Store</h1>
+      <p>Best deals, fast delivery and quality products at your fingertips.</p>
+      <button class="btn btn-success">Shop Now</button>
+    </div>
+    <div class="col-md-6">
+      <img src="https://i.imgur.com/8Qf8ZLw.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- CASHBACK OFFERS -->
+<section class="container offer">
+
+  <h3 class="mb-3">🔥 Cashback & Deals</h3>
+
+  <div class="row g-3">
+
+    <div class="col-md-4">
+  <a href="offer.html?type=instant10" class="offer-link">
+    <div class="offer-box">
+      <h5>💰 10% Instant Cashback</h5>
+      <p>On your first order above ₹999</p>
+    </div>
+  </a>
+</div>
+    <div class="col-md-4">
+  <a href="offer.html?type=buy2" class="offer-link">
+    <div class="offer-box">
+      <h5>🛒 Buy 2 Get Cashback</h5>
+      <p>Extra ₹200 cashback on combo purchases</p>
+    </div>
+  </a>
+</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+  <a href="offer.html?type=weekend" class="offer-link">
+    <div class="offer-box">
+      <h5>⚡ Weekend Deal</h5>
+      <p>Flat 15% cashback on Saturday & Sunday</p>
+    </div>
+  </a>
+</div>
+
+    <div class="col-md-4">
+  <a href="offer.html?type=app" class="offer-link">
+    <div class="offer-box">
+      <h5>📱 App Exclusive</h5>
+      <p>Extra 5% cashback on mobile orders</p>
+    </div>
+  </a>
+</div>
+
+    <div class="col-md-4">
+  <a href="offer.html?type=student" class="offer-link">
+    <div class="offer-box">
+      <h5>🎓 Student Offer</h5>
+      <p>Special cashback for verified students</p>
+    </div>
+  </a>
+</div>
+
+    <div class="col-md-4">
+  <a href="offer.html?type=delivery" class="offer-link">
+    <div class="offer-box">
+      <h5>🚚 Free Delivery Deal</h5>
+      <p>Cashback equivalent of delivery charges</p>
+    </div>
+  </a>
+</div>
+
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="container">
+  <h3>Top Categories</h3>
+  <div class="row g-3">
+
+    <div class="col-md-2">
+  <a href="fashion.html" class="cat-link">
+    <div class="category bg-primary">Fashion</div>
+  </a>
+</div>
+
+    <div class="col-md-2">
+  <a href="electronics.html" class="cat-link">
+    <div class="category bg-danger">Electronics</div>
+  </a>
+</div>
+    <div class="col-md-2">
+  <a href="books.html" class="cat-link">
+    <div class="category bg-success">Books</div>
+  </a>
+</div>
+    <div class="col-md-2">
+  <a href="home.html" class="cat-link">
+    <div class="category bg-warning">Home</div>
+  </a>
+</div>
+   
+    <div class="col-md-2">
+  <a href="sports.html" class="cat-link">
+    <div class="category bg-dark">Sports</div>
+  </a>
+</div>
+
+  </div>
+</section>
+
+<!-- Products -->
+<section class="container mt-5">
+  <h3>Most Selling Products</h3>
+
+  <div class="row g-4">
+
+    <div class="col-md-3">
+      <div class="card product">
+        <img src="images/cam.webp">
+        <h6>Instax Camera</h6>
+        <p class="price">₹4,999</p>
+        <button onclick="addToCart()" class="btn btn-success btn-sm">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card product">
+        <img src="images/swatch.webp">
+        <h6>Smart Watch</h6>
+        <p class="price">₹2,999</p>
+        <button onclick="addToCart()" class="btn btn-success btn-sm">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card product">
+        <img src="images/shoem.webp">
+        <h6>Shoes</h6>
+        <p class="price">₹1,499</p>
+        <button onclick="addToCart()" class="btn btn-success btn-sm">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card product">
+        <img src="images/water bottle.webp">
+        <h6>Water Bottle</h6>
+        <p class="price">₹499</p>
+        <button onclick="addToCart()" class="btn btn-success btn-sm">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="container mt-5" id="contact">
+
+  <h3 class="mb-3">📞 Contact Us</h3>
+
+  <div class="row">
+
+    <!-- Form -->
+    <div class="col-md-6">
+      <div class="p-3 border">
+
+        <input type="text" id="name" class="form-control mb-2" placeholder="Your Name">
+        <input type="email" id="email" class="form-control mb-2" placeholder="Your Email">
+        <textarea id="message" class="form-control mb-2" rows="4" placeholder="Your Message"></textarea>
+
+        <button class="btn btn-dark w-100" onclick="sendMessage()">Send</button>
+
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="col-md-6">
+      <div class="p-3 border h-100">
+
+        <h5>🏢 ShopKart Support</h5>
+        <p>📍 Madurai, Tamil Nadu</p>
+        <p>📧 support@shopkart.com</p>
+        <p>📱 +91 98765 43210</p>
+
+        <hr>
+
+        <p>🕒 Mon - Sat: 9 AM - 9 PM</p>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>

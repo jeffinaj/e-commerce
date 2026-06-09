@@ -1,0 +1,239 @@
+body {
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #000000;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar a {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+/* HERO SECTION */
+.hero {
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 0px;
+  margin-top: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.hero p {
+  color: #333333;
+}
+
+/* BUTTON */
+.btn-success {
+  background: #000000;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+
+/* =========================
+   OFFER SECTION WRAPPER
+========================= */
+.offer {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Section title */
+.offer h3 {
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   OFFER GRID FIX
+========================= */
+.offer .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* =========================
+   OFFER CARD (NEW DESIGN)
+========================= */
+.offer-box {
+  border: 1px solid #000;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover effect */
+.offer-box:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* top badge style feel */
+.offer-box h5 {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* description */
+.offer-box p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =========================
+   CLICKABLE FULL CARD FIX
+========================= */
+.offer-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* =========================
+   HOVER ANIMATION LINE
+========================= */
+.offer-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.offer-box:hover::after {
+  width: 100%;
+  background: #fff;
+}
+
+/* CATEGORY BOX */
+.category {
+  padding: 20px;
+  border: 1px solid #000000;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ffffff;
+  color: #000000;
+  transition: 0.2s;
+}
+
+.category:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* PRODUCT CARD */
+.product {
+  padding: 15px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  transition: 0.2s;
+  background: #ffffff;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+  border: 1px solid #000000;
+}
+
+.product img {
+  width: 100%;
+}
+
+.price {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* CART TEXT */
+#cartMsg {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* OFFER SECTION TITLE */
+.offer h3 {
+  font-weight: bold;
+  color: #000;
+}
+
+/* OFFER BOX */
+.offer-box {
+  border: 1px solid #000;
+  padding: 20px;
+  background: #fff;
+  transition: 0.2s;
+  height: 100%;
+}
+
+.offer-box:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.offer-box h5 {
+  font-weight: bold;
+}
+
+.offer-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.offer-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cat-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

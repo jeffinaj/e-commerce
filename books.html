@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      background: #fff;
+      font-family: Arial;
+      color: #000;
+    }
+
+    .container {
+      margin-top: 40px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .genre {
+      border: 1px solid #000;
+      padding: 25px;
+      text-align: center;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .genre:hover {
+      background: #000;
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .genre-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .back {
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <a href="index.html" class="back">← Back</a>
+
+  <h4 class="section-title">📚 Book Genres</h4>
+
+  <div class="row g-3">
+
+    <div class="col-md-3">
+      <a href="book-list.html?genre=fiction" class="genre-link">
+        <div class="genre">📖 Fiction</div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="book-list.html?genre=science" class="genre-link">
+        <div class="genre">🔬 Science</div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="book-list.html?genre=education" class="genre-link">
+        <div class="genre">🎓 Education</div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="book-list.html?genre=biography" class="genre-link">
+        <div class="genre">👤 Biography</div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="book-list.html?genre=technology" class="genre-link">
+        <div class="genre">💻 Technology</div>
+      </a>
+    </div>
+
+    <div class="col-md-3">
+      <a href="book-list.html?genre=business" class="genre-link">
+        <div class="genre">📊 Business</div>
+      </a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

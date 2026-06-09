@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #fff;
+      font-family: Arial;
+      color: #000;
+    }
+
+    .card-box {
+      border: 1px solid #000;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .rating {
+      margin: 10px 0;
+    }
+
+    .btn-buy {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+    }
+
+    .btn-buy:hover {
+      opacity: 0.8;
+    }
+
+    img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="card-box row">
+
+    <!-- IMAGE -->
+    <div class="col-md-5">
+      <img id="productImg" src="https://via.placeholder.com/300">
+    </div>
+
+    <!-- DETAILS -->
+    <div class="col-md-7">
+
+      <h2 id="title">Product</h2>
+
+      <p class="rating">⭐ 4.5 Rating</p>
+
+      <p class="price">₹999</p>
+
+      <p id="desc">High quality fashion product for daily use.</p>
+
+      <button class="btn-buy">Buy Now</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const item = params.get("item");
+
+  const products = {
+    tshirt: {
+      title: "Modern T-Shirt",
+      price: "₹499",
+      img: "images/mtshirt.webp",
+      desc: "Stylish cotton wear perfect for daily use."
+    },
+    jeans: {
+      title: "Jeans Pant",
+      price: "₹999",
+      img: "https://i.imgur.com/O3M8QYx.png",
+      desc: "Comfort fit denim with modern style."
+    },
+    shoes: {
+      title: "Sports Shoes",
+      price: "₹1499",
+      img: "https://i.imgur.com/2nCt3Sb.png",
+      desc: "Casual & sports shoes for all occasions."
+    },
+    western: {
+      title: "Western Wear",
+      price: "₹799",
+      img: "https://i.imgur.com/4Q9QO8v.png",
+      desc: "Modern stylish outfit collection."
+    },
+    dress: {
+    title: "Party Dress",
+    price: "₹1299",
+    img: "images/pwearsg.webp",
+    desc: "Elegant party wear dress."
+  },
+
+  top: {
+    title: "Trendy Top",
+    price: "₹699",
+    img: "images/ttopsg.webp",
+    desc: "Comfortable casual top."
+  },
+
+  heels: {
+    title: "Fashion Heels",
+    price: "₹999",
+    img: "images/healsg.webp",
+    desc: "Stylish high heels."
+  },
+
+  kurti: {
+    title: "Designer Kurti",
+    price: "₹899",
+    img: "images/d.webp",
+    desc: "Traditional modern kurti."
+  },
+
+  earrings: {
+    title: "Earrings",
+    price: "₹299",
+    img: "images/e.webp",
+    desc: "Beautiful fashion earrings."
+  },
+
+  necklace: {
+    title: "Necklace Set",
+    price: "₹599",
+    img: "images/n.webp",
+    desc: "Stylish jewelry set."
+  },
+  shirt: {
+  title: "Formal Shirt",
+  price: "₹799",
+  img: "images/fm.webp",
+  desc: "Perfect office wear shirt."
+},
+
+pant: {
+  title: "Formal Pant",
+  price: "₹999",
+  img: "images/fp.webp",
+  desc: "Classic comfortable trousers."
+},
+
+watch: {
+  title: "Wrist Watch",
+  price: "₹1999",
+  img: "images/w.webp",
+  desc: "Stylish premium watch."
+},
+
+shoes_men: {
+  title: "Formal Shoes",
+  price: "₹1499",
+  img: "images/fs.webp",
+  desc: "Elegant leather shoes for men."
+},
+
+belt: {
+  title: "Leather Belt",
+  price: "₹399",
+  img: "images/bm.webp",
+  desc: "Premium quality belt."
+},
+
+wallet: {
+  title: "Leather Wallet",
+  price: "₹599",
+  img: "images/wm.webp",
+  desc: "Stylish men wallet."
+},
+saree: {
+  title: "Silk Saree",
+  price: "₹1999",
+  img: "images/sw.webp",
+  desc: "Traditional elegant silk saree."
+},
+
+kurti_women: {
+  title: "Designer Kurti",
+  price: "₹899",
+  img: "images/km.webp",
+  desc: "Stylish ethnic kurti."
+},
+
+gown: {
+  title: "Party Gown",
+  price: "₹2499",
+  img: "images/gm.webp",
+  desc: "Elegant western party wear gown."
+},
+
+heels_women: {
+  title: "Fashion Heels",
+  price: "₹1299",
+  img: "images/hm.webp",
+  desc: "Comfortable stylish heels."
+},
+
+bag: {
+  title: "Hand Bag",
+  price: "₹999",
+  img: "images/bmm.webp",
+  desc: "Trendy designer handbag."
+},
+
+jewelry_set: {
+  title: "Jewelry Set",
+  price: "₹799",
+  img: "images/jsm.webp",
+  desc: "Complete fashion jewelry set."
+},
+mobile: {
+  title: "Smartphone",
+  price: "₹14999",
+  img: "images/mw.webp",
+  desc: "Latest Android & iPhone models."
+},
+
+laptop: {
+  title: "Laptop",
+  price: "₹49999",
+  img: "images/lw.webp",
+  desc: "High performance laptops for work & gaming."
+},
+
+headphones: {
+  title: "Headphones",
+  price: "₹1999",
+  img: "images/hmm.webp",
+  desc: "Wireless Bluetooth headphones."
+},
+
+smartwatch: {
+  title: "Smart Watch",
+  price: "₹2999",
+  img: "images/sw.webp",
+  desc: "Fitness tracking smartwatch."
+},
+
+tv: {
+  title: "Smart TV",
+  price: "₹25999",
+  img: "images/tv.webp",
+  desc: "4K Android Smart TV."
+},
+
+camera: {
+  title: "Camera",
+  price: "₹39999",
+  img: "images/cam.webp",
+  desc: "Professional DSLR camera."
+},
+sofa: {
+  title: "Luxury Sofa Set",
+  price: "₹14999",
+  img: "images/ss.webp",
+  desc: "Comfortable modern sofa set for living room."
+},
+
+bed: {
+  title: "King Size Bed",
+  price: "₹19999",
+  img: "images/bb.webp",
+  desc: "Premium wooden bed for comfort sleep."
+},
+
+dining: {
+  title: "Dining Table Set",
+  price: "₹9999",
+  img: "images/dd.webp",
+  desc: "Elegant 4–6 seater dining table."
+},
+
+chair: {
+  title: "Office Chair",
+  price: "₹2999",
+  img: "images/cc.webp",
+  desc: "Ergonomic comfortable chair."
+},
+
+lamp: {
+  title: "Table Lamp",
+  price: "₹799",
+  img: "images/l.webp",
+  desc: "Modern decorative lamp."
+},
+
+curtains: {
+  title: "Curtains",
+  price: "₹599",
+  img: "images/cur.webp",
+  desc: "Stylish home curtains."
+},
+cricket_bat: {
+  title: "Cricket Bat",
+  price: "₹1499",
+  img: "images/bat.webp",
+  desc: "Professional cricket bat for matches."
+},
+
+football: {
+  title: "Football",
+  price: "₹699",
+  img: "images/bbb.webp",
+  desc: "High-quality FIFA standard football."
+},
+
+badminton: {
+  title: "Badminton Set",
+  price: "₹999",
+  img: "images/bmt.webp",
+  desc: "Rackets with shuttlecock set."
+},
+
+shoes_sports: {
+  title: "Sports Shoes",
+  price: "₹1299",
+  img: "images/shoeb.webp",
+  desc: "Comfortable running & gym shoes."
+},
+
+dumbbells: {
+  title: "Dumbbells Set",
+  price: "₹1999",
+  img: "images/db.webp",
+  desc: "Home gym fitness equipment."
+},
+
+yoga_mat: {
+  title: "Yoga Mat",
+  price: "₹499",
+  img: "images/ym.webp",
+  desc: "Comfortable yoga training mat."
+}
+  };
+
+  const p = products[item];
+
+  if (p) {
+    document.getElementById("title").innerText = p.title;
+    document.getElementById("productImg").src = p.img;
+    document.querySelector(".price").innerText = p.price;
+    document.getElementById("desc").innerText = p.desc;
+  }
+</script>
+
+</body>
+</html>
