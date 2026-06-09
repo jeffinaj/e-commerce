@@ -138,7 +138,6 @@ B.Tech Artificial Intelligence and Data Science
 
 Passionate about Web Development, Python Programming, Artificial Intelligence, and Building Real-World Applications.
 
-GitHub: https://github.com/yourusername
 
 ## 📜 License
 
